@@ -37,7 +37,7 @@ Cypress.Commands.add('postBodyEmpty', ()=> {
     }).then(res => { return res })
 })
 
-Cypress.Commands.add('postBodyMetade', ()=> {
+Cypress.Commands.add('postBodyIncompleto', ()=> {
     cy.api({
         method: 'POST',
         url: '/users',
@@ -73,6 +73,24 @@ Cypress.Commands.add('postBodyValorCaracterEspecial', ()=> {
     }).then(res => { return res })
 })
 
+Cypress.Commands.add('postTempoMeno200ms', () => {
+    cy.api({
+      method: 'POST',
+      url: '/users',
+      body:  json.body.Valido,
+      failStatusCode: false
+    }).then( res => { return res })
+})
+
+Cypress.Commands.add('postTempoMeno500ms', () => {
+    cy.api({
+      method: 'POST',
+      url: '/users',
+      body:  json.body.Valido,
+      failStatusCode: false
+    }).then( res => { return res })
+})
+
 // ENDPOINT GET
 
 Cypress.Commands.add('getDataAll', () => {
@@ -103,7 +121,7 @@ Cypress.Commands.add('getObjetoValido', () => {
     }).then(res => { return res })
 })
 
-Cypress.Commands.add('getIdEspacoBranco', () => {
+Cypress.Commands.add('getIdCaratcerSpecial', () => {
     cy.api({
         method: 'GET',
         url: `/users/${data.idInvalid.CaratcerSpecial}`,
@@ -129,7 +147,7 @@ Cypress.Commands.add('getIdString', () => {
 Cypress.Commands.add('getEmptyId', () => {
     cy.api({
         method: 'GET',
-        url: `/users/${data.idInvalid.Empty}`,
+        url: `/users/${data.idInvalid.invalido}`,
         failOnStatusCode: false
     }).then(res => { return res })
 })
@@ -142,20 +160,18 @@ Cypress.Commands.add('getIdNull', () => {
     }).then(res => { return res })
 })
 
-Cypress.Commands.add('tempoMeno200ms', () => {
+Cypress.Commands.add('getTempoMeno200ms', () => {
     cy.api({
       method: 'POST',
       url: '/users',
-      body:  json.body.Valido,
       failStatusCode: false
     }).then( res => { return res })
 })
 
-Cypress.Commands.add('tempoMeno500ms', () => {
+Cypress.Commands.add('getTempoMeno500ms', () => {
     cy.api({
       method: 'POST',
       url: '/users',
-      body:  json.body.Valido,
       failStatusCode: false
     }).then( res => { return res })
 })

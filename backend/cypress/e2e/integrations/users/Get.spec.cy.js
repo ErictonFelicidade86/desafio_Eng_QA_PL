@@ -42,7 +42,7 @@ describe('GET /users', () => {
 
   context('Realizar uma requisição GET com um ID inválido no sistema e verificar se o status code retornado indica erro', () => {
     it('Realizar uma requisição GET utilizando um ID com caracteres especiais', () => {
-      cy.getIdEspacoBranco()
+      cy.getIdCaratcerSpecial()
       .then(res => {
         expect(res.status).to.eq(404)
       })
@@ -62,10 +62,10 @@ describe('GET /users', () => {
       })
     })
 
-    it('Realizar uma requisição GET utilizando um ID vazio', () => {
+    it('Realizar uma requisição GET utilizando um ID fora do padrão', () => {
       cy.getEmptyId()
       .then(res => {
-        expect(res.status).to.eq(200)
+        expect(res.status).to.eq(404)
       })
     })
 
@@ -80,21 +80,13 @@ describe('GET /users', () => {
 
 describe('GET /users Validação do tempo de resposta', () => {
   it('Deve garantir que o tempo de resposta seja menor que 200ms', ()=> {
-    cy.api({
-      method: 'GET',
-      url: '/users',
-      failStatusCode: false
-    }).then( res => {
+    cy.getTempoMeno200ms().then( res => {
       expect(res.duration).to.be.lessThan(200)
     })
   })
 
   it('Deve garantir que o tempo de resposta seja menor que 500ms', ()=> {
-    cy.api({
-      method: 'GET',
-      url: '/users',
-      failStatusCode: false
-    }).then( res => {
+    cy.getTempoMeno500ms().then( res => {
       expect(res.duration).to.be.lessThan(500)
     })
   })

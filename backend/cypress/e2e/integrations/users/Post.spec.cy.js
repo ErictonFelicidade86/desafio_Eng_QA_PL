@@ -35,8 +35,8 @@ describe('POST /users', () => {
       })
     })
 
-    it('Realizar uma requisição POST utilizando um BODY metade', () => {
-      cy.postBodyMetade()
+    it('Realizar uma requisição POST utilizando um BODY incompleto', () => {
+      cy.postBodyIncompleto()
       .then(res => {
         expect(res.status).to.eq(400)
       })
@@ -67,13 +67,13 @@ describe('POST /users', () => {
 
 describe('POST /users Validação do tempo de resposta', () => {
   it('Deve garantir que o tempo de resposta seja menor que 200ms', ()=> {
-    cy.tempoMeno200ms().then( res => {
+    cy.postTempoMeno200ms().then( res => {
       expect(res.duration).to.be.lessThan(200)
     })
   })
 
   it('Deve garantir que o tempo de resposta seja menor que 500ms', ()=> {
-    cy.tempoMeno500ms().then( res => {
+    cy.postTempoMeno500ms().then( res => {
       expect(res.duration).to.be.lessThan(500)
     })
   })
