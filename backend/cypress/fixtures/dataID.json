@@ -1,0 +1,9 @@
+{
+    "idInvalid": {
+        "CaracterSpecial": "#$##%#$%#$",
+        "Empty": "",
+        "EspacoBranco": "1 0",
+        "String": "stringID",
+        "Null": null
+    }
+}

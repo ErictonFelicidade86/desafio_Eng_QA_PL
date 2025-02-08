@@ -1,0 +1,21 @@
+{
+  "valido": {
+    "name": "Tony",
+    "sobrenome": "Stark",
+    "email": "Tony@stark.io",
+    "emailConfirmar": "Tony@stark.io",
+    "senha": "Tonystark86#"
+  },
+  "diferente": {
+    "email": "stark@tony.io"
+  },
+  "senha_minima": {
+    "senha": "Tony"
+  },
+  "senha_fraca": {
+    "senha": "12345678#"
+  },
+  "senha_semLetraMaiuscula": {
+    "senha": "tonystark86#"
+  }
+}
