@@ -14,7 +14,7 @@ export const options = {
 };
 export default function () {
   
-  const url = 'https://jsonplaceholder.typicode.com/users'
+  const baseUrl = 'https://jsonplaceholder.typicode.com/users'
 
   const payload = JSON.stringify(dataBody)
 
@@ -22,14 +22,14 @@ export default function () {
     'Content-Type': 'application/json'
   }
 
-  const resPost = http.post(url, payload, headers);
+  const resPost = http.post(baseUrl, payload, headers);
 
   check(resPost, {
     'POST - Status should be 201': (r) => r.status === 201,
     'POST - Response Should have an id': (r) => r.json().id !== undefined,
   })
   
-  const resGet = http.get(url, headers)
+  const resGet = http.get(baseUrl, headers)
 
   check(resGet, {
     'GET - Status Should be 200': (r) => r.status === 200
