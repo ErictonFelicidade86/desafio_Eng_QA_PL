@@ -1,5 +1,7 @@
 
-# Teste de Cadastro de usuário senha fraca 
+# Teste de Cadastro de usuário
+
+### CT 007: Tentar cadastrar com uma senha fraca 
 
 ### Descrição  
 - Fazer um cadastro para a matricula
@@ -20,6 +22,9 @@
 ### Ambiente de Teste  
 - **Dispositivos**: Notebook
 - **Sistema Operacional**: Windows 11
+
+###
+- **STATUS:** Reprovado
 
 ### Evidência  
 ![image](../assets/aprovado/Tentar%20cadastrar%20com%20uma%20senha%20fraca.png)

@@ -1,4 +1,6 @@
-# Teste de Cadastro de usuário senha minima
+# Teste de Cadastro de usuário
+
+### CT 008: Tentar cadastrar com senha minima
 
 ### Descrição  
 - Fazer um cadastro para a matricula
@@ -19,6 +21,9 @@
 ### Ambiente de Teste  
 - **Dispositivos**: Notebook
 - **Sistema Operacional**: Windows 11
+
+###
+- **STATUS:** Reprovado
 
 ### Evidência  
 ![image](../assets/aprovado/Tentar%20cadastrar%20com%20senha%20minima.png)

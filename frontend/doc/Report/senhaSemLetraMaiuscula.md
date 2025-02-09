@@ -1,4 +1,6 @@
-# Teste de Cadastro de usuário senha sem letra maiuscula
+# Teste de Cadastro de usuário
+
+### CT 009: Tentar cadastrar sem uma letra maiuscula
 
 ### Descrição  
 - Fazer um cadastro para a matricula
@@ -19,6 +21,9 @@
 ### Ambiente de Teste  
 - **Dispositivos**: Notebook
 - **Sistema Operacional**: Windows 11
+
+###
+- **STATUS:** Reprovado
 
 ### Evidência  
 ![image](../assets/aprovado/Tentar%20cadastrar%20sem%20uma%20letra%20maiuscula.png)

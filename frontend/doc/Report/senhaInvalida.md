@@ -1,4 +1,6 @@
-# Teste de Cadastro de usuário senha fraca 
+# Teste de Cadastro de usuário
+
+### CT 010: Tentar cadastrar usando um senha inválido
 
 ### Descrição  
 - Fazer um cadastro para a matricula
@@ -19,6 +21,9 @@
 ### Ambiente de Teste  
 - **Dispositivos**: Notebook
 - **Sistema Operacional**: Windows 11
+
+###
+- **STATUS:** Reprovado
 
 ### Evidência  
 ![image](../assets/aprovado/Tentar%20cadastrar%20usando%20um%20senha%20inválido.png)
