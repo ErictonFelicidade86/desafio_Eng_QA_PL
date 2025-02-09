@@ -1,7 +1,7 @@
 describe('Cadastro', () => {
 
     beforeEach(() => {
-        cy.visit('')
+        cy.go(); //acessar o site
     })
 
     it('Deve cadastrar um usuário com sucesso', () => {        
@@ -13,51 +13,50 @@ describe('Cadastro', () => {
     context('Não deve cadastrar usando dados inválidos', () => {
 
         it('tentar cadastrar sem preencher o nome', () => {
-            cy.formsSemCampoNome()
-            cy.enviarCadastro() 
-            cy.wait(1000)
+            cy.executarFormulario('formsSemCampoNome');
+            cy.validarCampoObrigatorio('first-name');
         });
 
         it('tentar cadastrar sem preencher o sobrenome', () => {
-            cy.formsSemSobrenome()
-            cy.enviarCadastro()         
-            cy.wait(2000)
+            cy.executarFormulario('formsSemSobrenome');
+            cy.validarCampoObrigatorio('last-name');
         });
 
         it('tentar cadastrar sem preencher o email', () => {
-            cy.formsSemEmail()
-            cy.enviarCadastro()
-            cy.wait(2000)
+            cy.executarFormulario('formsSemEmail');
+            cy.validarCampoObrigatorio('email');
         });
 
         it('tentar cadastrar sem preencher o repetir email', () => {
-            cy.formsRepetirEmail()
-            cy.enviarCadastro()
-            cy.wait(2000)
+            cy.executarFormulario('formsRepetirEmail');
+            cy.validarCampoObrigatorio('confirm-email');
         });
 
         it('tentar cadastrar com email diferente', () => {
-            cy.formsEmailDiferente()
-            cy.enviarCadastro()
-            cy.wait(2000)
+            cy.executarFormulario('formsEmailDiferente');
+            cy.validarCampoObrigatorio('confirm-email');
         });
 
         it('tentar cadastrar com uma senha fraca', () => {
             cy.formsSenhaFraca()
             cy.enviarCadastro()
-            cy.wait(2000)
+            cy.ValidaMensagem()
+
+
         });
 
         it('tentar cadastrar com senha minima', () => {
             cy.formsSenhaMinima()
             cy.enviarCadastro()
-            cy.wait(2000)
+            cy.ValidaMensagem()
+
         });
 
         it('tentar cadastrar sem uma letra maiuscula', () => {
             cy.formsSemLetraMaiuscula()
             cy.enviarCadastro()
-            cy.wait(2000)
+            cy.ValidaMensagem()
+
         })
     })
 })
