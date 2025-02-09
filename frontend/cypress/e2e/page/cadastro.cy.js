@@ -41,22 +41,18 @@ describe('Cadastro', () => {
             cy.formsSenhaFraca()
             cy.enviarCadastro()
             cy.ValidaMensagem()
-
-
         });
 
         it('tentar cadastrar com senha minima', () => {
             cy.formsSenhaMinima()
             cy.enviarCadastro()
             cy.ValidaMensagem()
-
         });
 
         it('tentar cadastrar sem uma letra maiuscula', () => {
             cy.formsSemLetraMaiuscula()
             cy.enviarCadastro()
             cy.ValidaMensagem()
-
         })
     })
 })
