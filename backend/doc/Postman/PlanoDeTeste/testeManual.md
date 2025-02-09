@@ -44,14 +44,6 @@ Os Endpoint GET e POST que serão testados:
 ### Resposta da requisição GET bem-sucedido
 ![image](../assets/aprovado/Realizar%20uma%20requisição%20GET%20e%20verificar%20se%20o%20status%20code%20retornado%20está%20correto.png)
 
-### Realizar uma requisição GET e validar se os valores do cabeçalho (header) estão corretos
-### Resposta da requisição GET bem-sucedido
-![image]()
-
-### Realizar uma requisição GET e validar se os dados retornados estão em um formato de objeto válido
-### Resposta da requisição GET bem-sucedido
-![image]()
-
 ### Realizar uma requisição GET com um ID válido e verificar se o status code retornado com sucesso
 ### Resposta da requisição GET bem-sucedido
 ![image](..//assets/aprovado/Realizar%20uma%20requisição%20GET%20com%20um%20ID%20válido%20e%20verificar%20se%20o%20status%20code%20retornado%20com%20sucessos.png)
@@ -75,7 +67,6 @@ Os Endpoint GET e POST que serão testados:
 ### Realizar uma requisição GET utilizando um ID com valor nulo (null)
 ### Resposta da requisição GET bem-sucedido
 ![image](../assets/aprovado/Realizar%20uma%20requisição%20GET%20utilizando%20um%20ID%20com%20valor%20nulo.png)
-
 
 ## 7. Resultados Rerovados
 
