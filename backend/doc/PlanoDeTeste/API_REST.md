@@ -32,7 +32,6 @@ Os Endpoint GET e POST que serão testados:
 
 ## 3. Tipos de Testes
 - **Testes funcionais**
-- **Testes não funcionais**
 - **Testes automatizados e manuais**
 
 ## 4. Critérios de Aceitação
@@ -50,10 +49,22 @@ Os Endpoint GET e POST que serão testados:
  
 ### Resposta da requisição POST bem-sucedido
 
-![image](c:\Users\jessi\Pictures\Screenshots\Realizar uma requisição POST e validar se o status code de sucesso é retornado ao enviar dados válidos.png)
+![image](./assets/aprovado/Realizar%20uma%20requisição%20POST%20e%20validar%20se%20o%20status%20code%20de%20sucesso%20é%20retornado%20ao%20enviar%20dados%20válidos.png)
+
+### Realizar uma requisição POST e verificar se os valores do cabeçalho (header) estão corretos  
+ 
+### Resposta da requisição POST bem-sucedido
+
+![image](./assets/aprovado/Realizar%20uma%20requisição%20POST%20e%20verificar%20se%20os%20valores%20do%20cabeçalho%20(header)%20estão%20corretos.png)
+
+## Realizar uma requisição POST e validar se o ID retornado no corpo da resposta é único e possui o formato correto  
+ 
+### Resposta da requisição POST bem-sucedido
+
+![image](./assets/aprovado/Realizar%20uma%20requisição%20POST%20e%20validar%20se%20o%20ID%20retornado%20no%20corpo%20da%20resposta%20é%20único%20e%20possui%20o%20formato%20correto.png)
 
 
-## 7. Resultados Revrovados
+## 7. Resultados Rerovados
 
 ## 8. Riscos
 - **Possíveis problemas no teste:** Serviço da API REST {JSON} Placeholder não funcionando corretamente.
