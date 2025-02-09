@@ -1,21 +1,26 @@
 {
   "valido": {
-    "name": "Tony",
+    "nome": "Tony",
     "sobrenome": "Stark",
     "email": "Tony@stark.io",
     "emailConfirmar": "Tony@stark.io",
     "senha": "Tonystark86#"
   },
-  "diferente": {
-    "email": "stark@tony.io"
+  "invalido": {
+      "emailDiferente": "Ton@stark.io",
+      "emailConfirmDiferente": "Ton@stark.io",
+      "senhaForaPadrao": "Tonystark",
+      "senhaMinima": "Tony",
+      "senhaFraca": "12345678#",
+      "senhaSemLetraMaiuscula": "tonystark86#",
+      "senhaInvalida": "²³£¢¬°&°?/"
   },
-  "senha_minima": {
-    "senha": "Tony"
-  },
-  "senha_fraca": {
-    "senha": "12345678#"
-  },
-  "senha_semLetraMaiuscula": {
-    "senha": "tonystark86#"
+  "empty": {
+    "nome": " ",
+    "sobrenome": " ",
+    "email": " ",
+    "emailConfirmar": " ",
+    "senha": ""
   }
+  
 }

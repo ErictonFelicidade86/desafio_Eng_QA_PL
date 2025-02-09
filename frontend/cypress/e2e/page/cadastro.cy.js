@@ -1,7 +1,7 @@
-describe('Cadastro', () => {
+describe('Cadastro de usuário', () => {
 
     beforeEach(() => {
-        cy.go(); //acessar o site
+        cy.go() //acessar o site
     })
 
     it('Deve cadastrar um usuário com sucesso', () => {        
@@ -9,51 +9,75 @@ describe('Cadastro', () => {
         cy.enviarCadastro()
         cy.mensagemAlerta('Cadastro realizado com sucesso!')
     })
+})
 
-    context('Não deve cadastrar usando dados inválidos', () => {
+describe('Cadastro de usuarios com dado inválidos', ()=> {
+   
+    beforeEach(() => {
+        cy.go() //acessar o site
+    })
+   
+    context('Não deve cadastrar o usuário sem faltar um campo obrigatório', () => {
 
-        it('tentar cadastrar sem preencher o nome', () => {
-            cy.executarFormulario('formsSemCampoNome');
-            cy.validarCampoObrigatorio('first-name');
-        });
+        it('Tentar cadastrar sem preencher nenhum campo', () => {
+            cy.enviarCadastro()
+            cy.ValidaMensagem()
+            cy.formsSemInformarDados()
+        })
 
-        it('tentar cadastrar sem preencher o sobrenome', () => {
-            cy.executarFormulario('formsSemSobrenome');
-            cy.validarCampoObrigatorio('last-name');
-        });
+        it('Tentar cadastrar sem preencher o nome', () => {
+            cy.formsSemCampoNome()
+            cy.enviarCadastro()
+            cy.get('#first-name-error').should('be.visible').and('contain', 'O nome é obrigatório.')
+        })
 
-        it('tentar cadastrar sem preencher o email', () => {
-            cy.executarFormulario('formsSemEmail');
-            cy.validarCampoObrigatorio('email');
-        });
+        it('Tentar cadastrar sem preencher o sobrenome', () => {
+            cy.formsSemSobrenome()
+            cy.enviarCadastro()
+            cy.get('#last-name-error').should('be.visible').and('contain', 'O sobrenome é obrigatório.')
+        })
 
-        it('tentar cadastrar sem preencher o repetir email', () => {
-            cy.executarFormulario('formsRepetirEmail');
-            cy.validarCampoObrigatorio('confirm-email');
-        });
+        it('Tentar cadastrar sem preencher o email', () => {
+            cy.formsSemEmail()
+            cy.enviarCadastro()
+            cy.get('#email-error').should('be.visible').and('contain', 'O e-mail é obrigatório.')
 
-        it('tentar cadastrar com email diferente', () => {
-            cy.executarFormulario('formsEmailDiferente');
-            cy.validarCampoObrigatorio('confirm-email');
-        });
+        })
 
-        it('tentar cadastrar com uma senha fraca', () => {
+        it('Tentar cadastrar sem preencher o repetir email', () => {
+            cy.formsSemRepetirEmail()
+            cy.enviarCadastro()
+            cy.get('#confirm-email-error').should('be.visible').and('contain', 'A confirmação do e-mail é obrigatório.')
+        })
+
+        it('Tentar cadastrar com email diferente', () => {
+            cy.formsEmailDiferente()
+            cy.enviarCadastro()
+            cy.get('#confirm-email-error').should('be.visible').and('contain', 'Os e-mails não coincidem.')
+        })
+
+        it('Tentar cadastrar com uma senha fraca', () => {
             cy.formsSenhaFraca()
             cy.enviarCadastro()
             cy.ValidaMensagem()
-        });
+        })
 
-        it('tentar cadastrar com senha minima', () => {
+        it('Tentar cadastrar com senha minima', () => {
             cy.formsSenhaMinima()
             cy.enviarCadastro()
             cy.ValidaMensagem()
-        });
+        })
 
-        it('tentar cadastrar sem uma letra maiuscula', () => {
+        it('Tentar cadastrar sem uma letra maiuscula', () => {
             cy.formsSemLetraMaiuscula()
+            cy.enviarCadastro()
+            cy.ValidaMensagem()
+        })
+
+        it('Tentar cadastrar usando um senha inválido', () => {
+            cy.formsSenhaInvalida()
             cy.enviarCadastro()
             cy.ValidaMensagem()
         })
     })
 })
-
