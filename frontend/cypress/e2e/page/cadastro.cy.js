@@ -41,7 +41,6 @@ describe('Cadastro de usuarios com dado inválidos', ()=> {
             cy.formsSemEmail()
             cy.enviarCadastro()
             cy.get('#email-error').should('be.visible').and('contain', 'O e-mail é obrigatório.')
-
         })
 
         it('Tentar cadastrar sem preencher o repetir email', () => {
