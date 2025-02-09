@@ -40,7 +40,8 @@ describe('GET /users', () => {
     })
   })
 
-  context('Realizar uma requisição GET com um ID inválido no sistema e verificar se o status code retornado indica erro', () => {
+  context('Realizar uma requisição GET com um ID inválido da API REST e verificar se o status code retornado indica erro', () => {
+    
     it('Realizar uma requisição GET utilizando um ID com caracteres especiais', () => {
       cy.getIdCaratcerSpecial()
       .then(res => {

@@ -162,7 +162,7 @@ Cypress.Commands.add('getIdNull', () => {
 
 Cypress.Commands.add('getTempoMeno200ms', () => {
     cy.api({
-      method: 'POST',
+      method: 'GET',
       url: '/users',
       failStatusCode: false
     }).then( res => { return res })
@@ -170,7 +170,7 @@ Cypress.Commands.add('getTempoMeno200ms', () => {
 
 Cypress.Commands.add('getTempoMeno500ms', () => {
     cy.api({
-      method: 'POST',
+      method: 'GET',
       url: '/users',
       failStatusCode: false
     }).then( res => { return res })
