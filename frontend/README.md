@@ -9,18 +9,18 @@ Cypress Teste Automatizado de Cadastro de Usuário
 - Javascript
 - Node.js
 
-## Rodando
+### Executar o projeto cypress
 
-1. Clonar o repositório, instalar as dependências
+## Clonar o repositório
+
+1. Instalar as dependências
 ```
 npm install
 ```
-
 2. Subir o Cypress UI
 ```
 npx cypress open 
 ```
-
 3. Executar testes em Headless
 ```
 npx cypress run 
