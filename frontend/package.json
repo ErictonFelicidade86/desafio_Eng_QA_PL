@@ -1,0 +1,15 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "keywords": [],
+  "author": "Ericton Brito",
+  "license": "MIT",
+  "description": "Criar testes automatizados de interface (UI) para um formulário de cadastro.",
+  "dependencies": {
+    "cypress": "^14.0.2"
+  }
+}

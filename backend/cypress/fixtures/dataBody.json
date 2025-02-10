@@ -1,0 +1,104 @@
+{
+  "body": {
+    "Empty": {},
+    "Metade": {
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "address": {
+          "street": "Kulas Light",
+          "suite": "Apt. 556",
+          "city": "Gwenborough",
+          "zipcode": "92998-3874"
+      }
+    },
+    "Valido": {
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "address": {
+          "street": "Kulas Light",
+          "suite": "Apt. 556",
+          "city": "Gwenborough",
+          "zipcode": "92998-3874",
+          "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+          }
+      },
+      "phone": "1-770-736-8031 x56442",
+      "website": "hildegard.org",
+      "company": {
+          "name": "Romaguera-Crona",
+          "catchPhrase": "Multi-layered client-server neural-net",
+          "bs": "harness real-time e-markets"
+      }
+    },
+    "Invalido": {
+      "Leanne Graham": "name",
+      "Bret": "username",
+      "Sincere@april.biz": "email",
+      "address": {
+          "Kulas Light": "street",
+          "Apt. 556": "suite",
+          "Gwenborough": "city",
+          "92998-3874": "zipcode",
+          "geo": {
+              "-37.3159": "lat",
+              "81.1496": "lng" 
+          }
+      },
+      "1-770-736-8031 x56442": "phone",
+      "hildegard.org": "website",
+      "company": {
+          "Romaguera-Crona": "name",
+          "Multi-layered client-server neural-net": "catchPhrase",
+          "harness real-time e-markets": "bs" 
+      }
+    },
+    "NullValues": {
+      "name": null,
+      "email": null,
+      "email": null,
+      "address": {
+          "street": null,
+          "suite": null,
+          "city": null,
+          "zipcode": null,
+          "geo": {
+              "lat": null,
+              "lng": null
+          }
+      },
+      "phone": null,
+      "website": null,
+      "company": {
+          "name": null,
+          "catchPhrase": null,
+          "bs": null
+      }
+    },
+    "SpecialCharacters": {
+      "name": "#$%@!",
+      "email": "invalid@@@example.com",
+      "email": "Sincere@april.biz",
+      "address": {
+          "street": "@#$@#$@#$@@#$@#$@#$@#",
+          "suite": "@#$@#$@#$@@#$@#$@#$@#",
+          "city": "@#$@#$@#$@@#$@#$@#$@#",
+          "zipcode": "92998-3874",
+          "geo": {
+              "lat": "@#$@#$@#$@@#$@#$@#$@#",
+              "lng": "@#$@#$@#$@@#$@#$@#$@#"
+          }
+      },
+      "phone": "@#$@#$@#$@@#$@#$@#$@#",
+      "website": "@#$@#$@#$@@#$@#$@#$@#",
+      "company": {
+          "name": "@#$@#$@#$@@#$@#$@#$@#",
+          "catchPhrase": "@#$@#$@#$@@#$@#$@#$@#",
+          "bs": "@#$@#$@#$@@#$@#$@#$@#"
+      }
+    }
+  }
+}
