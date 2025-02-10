@@ -24,4 +24,4 @@
 - **Sistema Operacional**: Windows 11
 
 ### Evidência  
-![image](../tests/assets/stress/teste_stress.png)
+![image](../assets/stress/teste_stress.png)

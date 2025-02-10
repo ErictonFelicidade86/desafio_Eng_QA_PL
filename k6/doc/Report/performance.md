@@ -21,4 +21,4 @@
 - **Sistema Operacional**: Windows 11
 
 ### Evidência  
-![image](../tests/assets/performance/teste_performance.png)
+![image](../assets/performance/teste_performance.png)
