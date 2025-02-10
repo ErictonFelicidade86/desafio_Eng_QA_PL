@@ -2,7 +2,8 @@
 
 ## Sobre
 
-Cypress Teste Automatizado de Cadastro de Usuário
+- Teste Automatizado de Cadastro de Usuário do site **[Girafas do Saber](https://jessikaaguiar.github.io/forms-qa/)** com **Cypress**. 
+- O plano de teste e o report estão na pasta **Doc**
 
 ## Stacks
 - Cypress

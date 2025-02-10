@@ -2,7 +2,8 @@
 
 ## Sobre
 
-K6 Teste de Performance de API
+- Teste de Performance, Carga e Stress na API **[JSONPLACEHOLDER](https://jsonplaceholder.typicode.com)** com **K6**
+- O plano de teste e o report estão na pasta **Doc**
 
 ## Stacks
 - K6

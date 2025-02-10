@@ -2,7 +2,9 @@
 
 ## Sobre
 
-Cypress Teste Automatizado de API
+- Teste Automatizado na API **[JSONPLACEHOLDER](https://jsonplaceholder.typicode.com)** com **Cypress**.
+- O plano de teste e o report estão na pasta **Doc**
+
 
 ## Stacks
 - Cypress

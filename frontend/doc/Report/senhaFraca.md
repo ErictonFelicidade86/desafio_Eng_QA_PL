@@ -7,7 +7,7 @@
 - Fazer um cadastro para a matricula
 
 ### Passos para Reproduzir  
-1. Acesse a API REST **[Girafas do Saber](https://jessikaaguiar.github.io/forms-qa/)**.  
+1. Acesse o site da **[Girafas do Saber](https://jessikaaguiar.github.io/forms-qa/)**.  
 2. Preencher o Formulário de matrícula  
 
 ### Resultado Esperado  
@@ -22,6 +22,7 @@
 ### Ambiente de Teste  
 - **Dispositivos**: Notebook
 - **Sistema Operacional**: Windows 11
+- **Ferramenta**: Cypress
 
 ###
 - **STATUS:** Reprovado
