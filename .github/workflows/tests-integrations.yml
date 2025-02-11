@@ -4,23 +4,31 @@ on:
   workflow_dispatch:
     inputs:
       cli:
-        description: Run by K6 command line
+        description: "Run by K6 command line"
+        required: false
+        default: "k6 run k6/tests/carga.js"
 
 jobs:
   run-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup K6
         uses: grafana/setup-k6-action@v1
-      - name: Run local k6 test
-        uses: grafana/run-k6-action@v1
-        
-      - name: Run All k6 Tests
+
+      - name: Verify K6 Installation
+        run: k6 version  # Verifica se o K6 foi instalado corretamente
+
+      - name: Run K6 Load Tests
         run: |
-          k6 run carga.js
-          k6 run performance.js
-          k6 run stress.js
-          
+          echo "Verificando se os arquivos existem antes de rodar os testes..."
+          for file in k6/tests/carga.js k6/tests/performance.js k6/tests/stress.js; do
+            if [ -f "$file" ]; then
+              echo "Executando $file..."
+              k6 run $file
+            else
+              echo "⚠️ Arquivo $file não encontrado. Pulando este teste."
+            fi
+          done

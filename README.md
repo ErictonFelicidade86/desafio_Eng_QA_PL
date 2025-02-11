@@ -103,7 +103,7 @@ O candidato deve realizar um teste de carga simulando **100 usuários simultâne
 📂 frontend (Testes de Interface - Cypress)
 📂 backend (Testes de API - Cypress/Postman)
 📂 K6 (Testes de Performance - k6)
-├── 📄 README.md (Este arquivo)
+📄 README.md (Este arquivo)
 
 ```
 
