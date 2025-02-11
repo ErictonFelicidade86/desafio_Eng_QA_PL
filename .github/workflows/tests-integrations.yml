@@ -6,7 +6,7 @@ on:
       cli:
         description: "Run by K6 command line"
         required: false
-        default: "k6 run carga.js"
+        default: "k6 run k6/tests/carga.js"
 
 jobs:
   run-test:
@@ -24,7 +24,7 @@ jobs:
       - name: Run K6 Load Tests
         run: |
           echo "Verificando se os arquivos existem antes de rodar os testes..."
-          for file in carga.js performance.js stress.js; do
+          for file in k6/tests/carga.js k6/tests/performance.js k6/tests/stress.js; do
             if [ -f "$file" ]; then
               echo "Executando $file..."
               k6 run $file
